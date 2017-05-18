@@ -1,4 +1,8 @@
 # Pluralsight Scraper
+ [![GitHub issues](https://img.shields.io/github/issues/Stormiix/pluralsight_scraper.svg?style=flat-square)](https://github.com/Stormiix/pluralsight_scraper/issues)
+[![GitHub forks](https://img.shields.io/github/forks/Stormiix/pluralsight_scraper.svg?style=flat-square)](https://github.com/Stormiix/pluralsight_scraper/network)
+[![GitHub stars](https://img.shields.io/github/stars/Stormiix/pluralsight_scraper.svg?style=flat-square)](https://github.com/Stormiix/pluralsight_scraper/stargazers)
+
 Allows you to fetch & download the courses on PluralSight - MUST HAVE AN ACCOUNT IN ORDER TO DOWNLOAD
 ## Setup
 
