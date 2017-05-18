@@ -1,9 +1,9 @@
 # @Author: Anas Mazouni <Stormix>
 # @Date:   2017-05-17T23:59:31+01:00
 # @Email:  madadj4@gmail.com
-# @Project: PluralSight Scrapper V1.0
+# @Project: PluralSight Scraper V1.0
 # @Last modified by:   Stormix
-# @Last modified time: 2017-05-18T03:42:55+01:00
+# @Last modified time: 2017-05-18T04:15:07+01:00
 
 import selenium as sl
 import os,time,inspect
@@ -136,9 +136,3 @@ class PluralCourse:
                 if chunk:
                     f.write(chunk)
                     f.flush()
-# Testing !
-link = "https://app.pluralsight.com/player?course=nodejs-express-web-applications&author=jonathan-mills&name=nodejs-express-web-applications-m1&clip=0&mode=live"
-test = PluralCourse(link)
-test.launchBrowser()
-test.login()
-down = test.downloadEpisodes()
