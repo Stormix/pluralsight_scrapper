@@ -3,7 +3,7 @@
 # @Email:  madadj4@gmail.com
 # @Project: PluralSight Scraper V1.0
 # @Last modified by:   Stormix
-# @Last modified time: 2017-05-18T04:15:07+01:00
+# @Last modified time: 2017-05-18T17:08:22+01:00
 
 import selenium as sl
 import os,time,inspect
@@ -87,16 +87,15 @@ class PluralCourse:
     def downloadEpisodes(self):
         #Create output folder
         self.createDir(self.output)
-
         titlesClass = ".m-0.p-0.ps-color-white.ps-type-sm.ps-type-weight-medium"
         moduleClass = ".module"
-        episodesListClass = "ul.clips.m-0.p-0"
+        episodesListClass = ".clips.m-0.p-0"
         modules = {}
         modulesSections = [elt.click() for elt in self.browser.find_elements_by_css_selector(moduleClass)] # Click all sections
         ModuleTitles = [element.text for element in self.browser.find_elements_by_css_selector(titlesClass)] # Looping through each title
         #Fetching the modules episodes lists
         Modules = self.browser.find_elements_by_css_selector(episodesListClass)
-        for i in range(len(Modules)):
+        for i in range(len(ModuleTitles)):
             #Create output folder
             self.createDir(self.output+"/"+slugify(ModuleTitles[i]))
             #For each list items(li) in the each list(ul) ,Get the titles (h3)

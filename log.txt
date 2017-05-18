@@ -1,0 +1,70 @@
+Course : Building Web Applications with Node.js and Express 4.0
+***************************************************************
+# Getting_Started
+    -- Introduction
+    -- Our First App
+    -- NPM Start
+    -- Simple Routing
+    -- Bootstrap Templates
+    -- Static Files
+    -- Bower
+    -- Summary
+# Setting_Up_Express
+    -- Introduction
+    -- What Is Gulp?
+    -- Coding Standards with JSHint and JSCS
+    -- JSCS in Gulp
+    -- Setting up Wiredep
+    -- Fixing Bootstrap and Wiredep
+    -- Setting up Gulp-inject
+    -- Working with Nodemon
+    -- Summary
+# Setting_Up_Gulp
+    -- Introduction
+    -- Jade
+    -- Jade and JavaScript
+    -- Handlebars
+    -- EJS
+    -- Summary
+# Templating_Engines
+    -- Introduction
+    -- Navigation
+    -- Routing
+    -- Rendering
+    -- Separate Files
+    -- Single Book Route
+    -- Rendering a Single Book
+    -- Router Functions
+    -- Summary
+# Routing
+    -- Introduction
+    -- MS Sql
+    -- Prepared Statements
+    -- Middleware
+    -- MongoDB
+    -- Admin Routes
+    -- Adding Books
+    -- Testing Insert
+    -- Select Many
+    -- Select One
+    -- Summary
+# Databases
+    -- Introduction
+    -- Sign in Form
+    -- Creating the Auth Routes
+    -- Passport Middleware
+    -- Local Strategy
+    -- Saving the User
+    -- User Sign In
+    -- Verifying the User in the Database
+    -- Securing Routes
+    -- Securing Multiple Routes
+    -- Summary
+# Authentication
+    -- Introduction
+    -- Controllers
+    -- Goodreads API
+    -- Services
+    -- HTTP
+    -- Adding the Id
+    -- Summary
