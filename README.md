@@ -27,13 +27,13 @@ Allows you to fetch & download the courses on PluralSight - MUST HAVE AN ACCOUNT
 ## Configure the tool
 
 1. Create a new file config.py and add the following:
-```
+```python
     Username = "Your PluralSight Email/Username"
     Password = "Your PluralSight Password"
 ```
 2. Modify pluralsight.py and change both lines 10 & 11:
 
-```
+```python
     title = "COURSE TITLE"
     link = "COURSE PLAYER URL"
 ```
