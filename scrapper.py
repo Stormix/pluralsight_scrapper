@@ -3,7 +3,7 @@
 # @Email:  madadj4@gmail.com
 # @Project: PluralSight Scrapper V1.0
 # @Last modified by:   Stormix
-# @Last modified time: 2017-05-18T03:21:42+01:00
+# @Last modified time: 2017-05-18T03:42:55+01:00
 
 import selenium as sl
 import os,time,inspect
@@ -15,9 +15,6 @@ import config
 from slugify import slugify
 from clint.textui import progress
 import requests
-link = "https://app.pluralsight.com/player?course=nodejs-express-web-applications&author=jonathan-mills&name=nodejs-express-web-applications-m1&clip=0&mode=live"
-
-
 
 class PluralCourse:
     """
@@ -87,7 +84,7 @@ class PluralCourse:
         self.pausePlayback()
         print(u'\u2713')
 
-    def fetchModules(self):
+    def downloadEpisodes(self):
         #Create output folder
         self.createDir(self.output)
 
@@ -109,10 +106,16 @@ class PluralCourse:
                 # Get the episode elemnt
                 self.browser.find_element_by_xpath("//*[contains(text(), '"+ModuleEpisodesList[j]+"')]").click()
                 time.sleep(self.delay*1.5)
-                print("Downloaded : ",self.getVideoLink())
+                self.pausePlayback()
+                print("Downloading : ",slugify(ModuleEpisodesList[j])+".mp4")
+                path =self.output+"/"+slugify(ModuleTitles[i])+"/"+slugify(ModuleEpisodesList[j])+"/"+slugify(ModuleEpisodesList[j])+".mp4"
+                if not os.path.exists(path):
+                    self.download(self.getVideoLink(),path)
+                else:
+                    print("Already downloaded ... skipping \n")
             # Store the module title and episodes list
             modules[ModuleTitles[i].replace(" ", "_")] = ModuleEpisodesList
-        self.pausePlayback()
+
         return modules
 
     def getVideoLink(self):
@@ -134,9 +137,8 @@ class PluralCourse:
                     f.write(chunk)
                     f.flush()
 # Testing !
+link = "https://app.pluralsight.com/player?course=nodejs-express-web-applications&author=jonathan-mills&name=nodejs-express-web-applications-m1&clip=0&mode=live"
 test = PluralCourse(link)
 test.launchBrowser()
 test.login()
-down = test.getVideoLink()
-print(down)
-test.download(down,"test.mp4")
+down = test.downloadEpisodes()

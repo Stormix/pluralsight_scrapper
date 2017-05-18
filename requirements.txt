@@ -1,0 +1,10 @@
+appdirs==1.4.3
+args==0.1.0
+clint==0.5.1
+packaging==16.8
+pyparsing==2.2.0
+python-slugify==1.2.4
+requests==2.14.2
+selenium==3.4.1
+six==1.10.0
+Unidecode==0.4.20
