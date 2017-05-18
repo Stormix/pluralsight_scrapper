@@ -24,9 +24,23 @@ Allows you to fetch & download the courses on PluralSight - MUST HAVE AN ACCOUNT
   pip install -r requirements.txt
 ```
 
+## Configure the tool
+
+1. Create a new file config.py and add the following:
+```
+    Username = "Your PluralSight Email/Username"
+    Password = "Your PluralSight Password"
+```
+2. Modify pluralsight.py and change both lines 10 & 11:
+
+```
+    title = "COURSE TITLE"
+    link = "COURSE PLAYER URL"
+```
+P.S : You can also change the scraper's delay time, by default it's 3sec
+
 ## Run the tool
 
 ```
   python pluralsight.py
 ```
-
